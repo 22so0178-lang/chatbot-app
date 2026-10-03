@@ -8,8 +8,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 app = Flask(__name__)
-client = OpenAI(api_key=os.getenv("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"))
-
+client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 @app.route("/")
 def home():
     return render_template("index.html")
